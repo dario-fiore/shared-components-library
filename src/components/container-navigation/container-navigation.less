@@ -1,0 +1,74 @@
+@import (reference) '../../global.less';
+
+:host {
+  display: block;
+
+  font-family: 'Nunito Sans', -apple-system, '.SFNSText-Regular', 'San Francisco', BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+}
+
+@gradient-start: #f59d00;
+
+@gradient-middle-start: #e63a10;
+
+@gradient-middle-end: #e40077;
+
+@gradient-end-1: #83388d;
+
+@gradient-end: #304392;
+
+@white: #ffffff;
+
+
+
+.container-navigation {
+
+ 
+  min-height: 50px;
+
+  background: #2f2f2f;
+
+  display: flex;
+
+  align-items: center;
+
+  cursor: pointer;
+  
+  color: @white;
+
+  padding: 0px 24px;
+
+  transition: all .4s;
+
+  .left-main-container {  
+    display: flex;
+    align-items: center;
+
+
+    flex: 1;
+
+    .logo-element {
+
+      filter: invert(1);
+
+      height: 40px;
+
+      padding-right: 10px;
+
+    }
+
+    .title-element {
+      padding-left: 15px;
+      
+      border-left: solid thin @white;
+  
+    }
+  }
+ 
+  &:hover {
+    background: linear-gradient(135deg, @gradient-start, @gradient-middle-start 22.98%, @gradient-middle-end 48.32%, @gradient-end-1 72.38%, @gradient-end);
+
+  }
+
+}
+

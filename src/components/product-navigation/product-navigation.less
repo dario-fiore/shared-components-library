@@ -1,0 +1,86 @@
+:host {
+  display: block;
+
+  font-family: 'Nunito Sans', -apple-system, '.SFNSText-Regular', 'San Francisco', BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+}
+
+.product-navigation {
+  border:#eee solid thin;
+
+  padding: 16px 24px;
+
+  display: flex;
+
+  align-items: center;
+
+  .left-main-container {
+
+    display: flex;
+
+    align-items: center;
+
+    .toggler-element {
+      height: 16px;
+    }
+
+    .logo-element {
+      width: 120px;
+
+      height: 24px;
+      
+      padding-left: 5px;
+    }
+
+  }
+
+  .right-main-container {
+    flex: 1;
+
+    .navigation-wrapper {
+
+      list-style: none;
+
+      display: flex;
+
+      align-items: center;
+
+      flex-direction: row;
+
+      margin: 0;
+
+      li {
+
+        margin: 0 0 0 1.11111rem;
+
+        a {
+
+          color: #1f1f1f;
+
+          text-decoration: none;
+
+          &:hover {
+            color: #a21f20
+          }
+
+        }
+
+      }
+
+      .highlighted-link {
+
+        background-color: #a21f20;
+
+        padding: 4px 10px;
+      
+
+        a {
+          color: white;
+        }
+
+      }
+
+    }
+
+  }
+}

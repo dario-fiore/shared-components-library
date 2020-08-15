@@ -6,56 +6,63 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
+    interface ContainerNavigation {
+        "ctaText"?: string;
+    }
+    interface ProductNavigation {
         /**
-          * The first name
+          * Product logo
          */
-        "first": string;
+        "productLogo": string;
         /**
-          * The last name
+          * Descriptor that allow to load links to different page
          */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+        "quickLinks": string;
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLContainerNavigationElement extends Components.ContainerNavigation, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLContainerNavigationElement: {
+        prototype: HTMLContainerNavigationElement;
+        new (): HTMLContainerNavigationElement;
+    };
+    interface HTMLProductNavigationElement extends Components.ProductNavigation, HTMLStencilElement {
+    }
+    var HTMLProductNavigationElement: {
+        prototype: HTMLProductNavigationElement;
+        new (): HTMLProductNavigationElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "container-navigation": HTMLContainerNavigationElement;
+        "product-navigation": HTMLProductNavigationElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
+    interface ContainerNavigation {
+        "ctaText"?: string;
+    }
+    interface ProductNavigation {
         /**
-          * The first name
+          * Product logo
          */
-        "first"?: string;
+        "productLogo"?: string;
         /**
-          * The last name
+          * Descriptor that allow to load links to different page
          */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+        "quickLinks"?: string;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "container-navigation": ContainerNavigation;
+        "product-navigation": ProductNavigation;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "container-navigation": LocalJSX.ContainerNavigation & JSXBase.HTMLAttributes<HTMLContainerNavigationElement>;
+            "product-navigation": LocalJSX.ProductNavigation & JSXBase.HTMLAttributes<HTMLProductNavigationElement>;
         }
     }
 }

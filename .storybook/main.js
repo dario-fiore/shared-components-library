@@ -7,10 +7,10 @@ const WriteFilePlugin = require('write-file-webpack-plugin');
 const OUTPUT_DIR = '../dist';
 // Stencil names the project entry the same as the project
 // Look for the file `dist/<your-project-name>.js` to find out what to insert here
-const PROJECT_NAME = 'sky-shared-component-library';
+const PROJECT_NAME = 'shared-component-library';
 
 module.exports = {
-  stories: ['../src/**/*.stories.js'],
+  stories: ['../src/**/*.stories.ts'],
   addons: ['@storybook/addon-notes/register'],
   // Custom webpack config to tell Storybook where to find the compiled files from Stencil
   async webpackFinal(config) {

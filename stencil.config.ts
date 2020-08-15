@@ -1,7 +1,11 @@
 import { Config } from '@stencil/core';
+import { less } from '@stencil/less';
 
 export const config: Config = {
-  namespace: 'sky-shared-component-library',
+  plugins: [
+    less()
+  ],
+  namespace: 'shared-component-library',
   taskQueue: 'async',
   outputTargets: [
     {

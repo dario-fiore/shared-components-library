@@ -1,7 +1,7 @@
 {
   "name": "@dario-fiore/shared-component-library",
   "repository": {
-    "url": "git://github.com/dario-fiore/sky-shared-components-library.git"
+    "url": "git://github.com/dario-fiore/shared-components-library.git"
   },
   "version": "0.2.0",
   "description": "Stencil Component Starter",
@@ -12,13 +12,14 @@
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/sky-shared-component-library/sky-shared-component-library.js",
+  "unpkg": "dist/shared-component-library/shared-component-library.js",
   "files": [
     "dist/",
     "loader/"
   ],
   "scripts": {
     "build": "stencil build --docs",
+    "build:watch": "stencil build --watch",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
@@ -29,6 +30,7 @@
   "devDependencies": {
     "@babel/core": "^7.11.1",
     "@stencil/core": "^1.17.3",
+    "@stencil/less": "^1.0.0",
     "@storybook/addon-actions": "^6.0.10",
     "@storybook/addon-essentials": "^6.0.10",
     "@storybook/addon-links": "^6.0.10",
@@ -36,6 +38,7 @@
     "@storybook/html": "^6.0.10",
     "babel-loader": "^8.1.0",
     "copy-webpack-plugin": "^6.0.3",
+    "npm-run-all": "^4.1.5",
     "react-is": "^16.13.1",
     "write-file-webpack-plugin": "^4.5.1"
   },
