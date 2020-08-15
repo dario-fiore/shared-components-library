@@ -1,5 +1,8 @@
 {
   "name": "@dario-fiore/shared-component-library",
+  "repository": {
+    "url": "git://github.com/dario-fiore/sky-shared-components-library.git"
+  },
   "version": "0.1.0",
   "description": "Stencil Component Starter",
   "main": "dist/index.js",
